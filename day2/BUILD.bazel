@@ -1,0 +1,25 @@
+cc_library(
+	name = "diff_for_line",
+	srcs = ["diff_for_line.c"],
+	hdrs = ["diff_for_line.h"],
+)
+
+cc_test(
+	name = "diff_for_line_test",
+	srcs = ["diff_for_line_test.c"],
+	deps = [":diff_for_line"],
+	size = "small",
+)
+
+cc_binary(
+	name = "day2",
+	srcs = ["day2.c"],
+	deps = [":diff_for_line"],
+)
+
+sh_test(
+	name = "day2_test",
+	srcs = ["day2_test.sh"],
+	data = [":day2"],
+	size = "small",
+)
