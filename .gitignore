@@ -1,0 +1,6 @@
+bazel-advent-of-code-2017
+bazel-bin
+bazel-genfiles
+bazel-out
+bazel-testlogs
+
