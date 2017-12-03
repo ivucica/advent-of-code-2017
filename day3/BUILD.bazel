@@ -1,0 +1,11 @@
+cc_binary(
+	name = "day3",
+	srcs = ["day3.c"],
+)
+
+sh_test(
+	name = "day3_test",
+	srcs = ["day3_test.sh"],
+	data = [":day3"],
+	size = "small",
+)
