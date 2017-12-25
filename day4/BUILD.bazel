@@ -1,0 +1,20 @@
+py_binary(
+  # Renaming main to day4_main.py means import will not get confused
+  # about what the 'day4' module is. There is one, and it's the directory.
+  name = "day4",
+  srcs = ["day4_main.py"],
+  main = "day4_main.py",
+  deps = [":day4_lib"],
+)
+
+py_library(
+  name = "day4_lib",
+  srcs = ["day4_lib.py"],
+)
+
+py_test(
+  name = "day4_test",
+  srcs = ["day4_test.py"],
+  deps = [":day4_lib"],
+  size = "small",
+)
