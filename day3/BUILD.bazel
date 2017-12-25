@@ -9,3 +9,15 @@ sh_test(
 	data = [":day3"],
 	size = "small",
 )
+
+cc_binary(
+	name = "day3_2",
+	srcs = ["day3_2.c"],
+)
+
+sh_test(
+	name = "day3_2_test",
+	srcs = ["day3_2_test.sh"],
+	data = [":day3_2"],
+	size = "small",
+)

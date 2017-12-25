@@ -24,7 +24,15 @@ A friend has also [sent me a spoiler](https://math.stackexchange.com/questions/1
 
 ### Part 2
 
-I missed the fact that there is a part 2. I may come back to it later.
+I've copied the part 1 solution. I've added a 64x64 grid, where the 64/2, 64/2 cell was mapped to 0, 0 of the part 1 algorithm.
+
+I've chosen such a small grid because it was sufficient for my input.
+
+I could have recalculated values for cells recursively or something like that, for an insanely slower solution. I could have mapped the spiral to a one-dimensional array instead of a grid, and figure out how to x,y to a cell in the array. It intuitively feels super simple -- it reminds me of mathematical exercises to prove whether infinite sets have the same amount of members. But I could not be bothered.
+
+I chose to have function returning a pointer to a grid cell given an input. Since the grid is initialized to zeroes and only cell 0,0 is a special case having a value of 1, I chose to sum all the surrounding members.
+
+The code doesn't check for boundaries so memory accesses might escape the grid boundaries for sufficiently large inputs. I don't see that happening though -- the number sizes grow very quickly, escaping the 64x64 grid is very unlikely.
 
 ## Problem text
 
