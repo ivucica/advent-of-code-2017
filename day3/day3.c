@@ -79,7 +79,7 @@ char ** argv;
           newdir = DOWN;
           if (i != val)
             y--;
-             
+
         }
       else
         {
